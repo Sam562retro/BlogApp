@@ -1,0 +1,15 @@
+<body>
+    <div class="container">
+        <h1 class="mb-4 text-center mt-4">Read Article</h1>
+        <h3 class="mb-2 mt-4">{{articleData.title}}</h3>
+        <div class="text-muted mb-2">
+            {{articleData.createdAt}}
+        </div>
+        <p>{{articleData.description}}</p>
+        <a href="/" class="btn btn-secondery">All Articles</a>
+        <a href="/articles/edit/{{articleData.id}}" class="btn btn-primary">Edit</a>
+        <div class="mt-2">
+            {{articleData.markdown}}
+        </div>
+    </div>
+</body>

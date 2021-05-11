@@ -1,0 +1,19 @@
+<body>
+    <div class="container">
+        <h1 class="mb-4 text-center mt-4">Our Blogs</h1>
+        <a href="/articles/new" class="btn btn-success">New Article</a>
+        {{#each articlesData}}
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4 class="card-title">{{ this.title }}</h4>
+                    <div class="card-subtitle">{{ this.createdAt }}</div>
+                    <div class="card-text">{{ this.description }}</div>
+                    <a class="btn btn-primary" href="articles/{{ this._id }}">Read More</a>
+                    <form method="POST" action="/articles/{{ this._id }}?_method=DELETE">
+                        <input type="submit" class="btn btn-danger" value="Delete">
+                    </form>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</body>
